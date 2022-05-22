@@ -1,0 +1,17 @@
+@import "scss/variables";
+
+.base {
+    cursor: pointer;
+    border: 0.0625rem solid $color_gray_dark;
+    padding: 0.5625rem 0.9375rem;
+    border-radius: 1.125rem;
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 0.89375rem;
+    width: fit-content;
+
+    @media (max-width: 480px) {
+        display: flex;
+        width: auto;
+    }
+}

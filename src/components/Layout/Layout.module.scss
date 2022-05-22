@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+}
+
+.content {
+    padding: 1.5625rem 1.25rem ;
+    margin-top: 5.125rem;
+    width: 100%;
+    @media (min-width: 781px) {
+        margin-left: 15.625rem;    
+        transition: all 0.3s ease;
+        &.full {
+            margin-left: 0;
+        }
+    }  
+}

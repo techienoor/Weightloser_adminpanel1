@@ -1,0 +1,41 @@
+@import "scss/variables";
+
+.base {
+    // > div {
+    //     display: flex;
+    //     gap: 1.08125rem;
+    // }
+    .quantity {
+        margin-top: 0.4em;
+        color: $color_gray_dark;
+        margin-bottom: 0.625rem;
+    }
+    .country {
+        border: 0.0625rem solid $color_gray_medium;
+        border-radius: 1.1875rem;
+        min-height: 1.0625rem;
+        white-space: nowrap;
+        padding: 0.09375rem 0.5rem;
+        box-sizing: border-box;
+        font-size: 0.6875rem;
+        color: $color_gray_medium;
+    }
+    .type {
+        background-color: $color_bg_success;
+        color: $color_text_success;
+        font-size: 0.6875rem;
+        border-radius: 1.1875rem;
+        min-height: 1.0625rem;
+        white-space: nowrap;
+        padding: 0.09375rem 0.5rem;
+        box-sizing: border-box;
+    }
+}
+
+.items {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}

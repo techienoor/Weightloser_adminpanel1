@@ -1,0 +1,45 @@
+.section_bio {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    
+    .left {
+        @media (min-width: 890px) {
+            width: 32.5em;
+        }
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 1em;
+        > div {
+            flex: 1;
+        }
+    }
+    .right {
+        display: flex;
+        flex: 1;
+        gap: 1em;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .top {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            > div {
+                flex: 1;
+            }
+        }
+    }
+}
+
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+    > div {
+        // min-width: 45%;
+        flex: 1;
+    }
+}

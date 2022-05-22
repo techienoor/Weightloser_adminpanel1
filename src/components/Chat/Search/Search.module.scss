@@ -1,0 +1,32 @@
+@import "scss/variables";
+
+.search_container {
+    min-height: 2.4375em;
+    background-color: $color_white;
+    display: inline-flex;
+    border-radius: 1.25em;
+    align-items: center;
+    padding-left: 1.225em;
+    padding-right: 1.225em;
+    gap: 0.73125em;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+
+    .icon {
+        padding-top: 0.3em;
+        svg {
+            width: 0.916875em;
+            height: 0.91em;
+        }
+    }
+
+    input {
+        background: transparent;
+        border: none;
+        font-size: 0.9375rem;
+        width: 100%;
+        outline: none;
+        font-family: "Montserrat", sans-serif;
+    }
+}

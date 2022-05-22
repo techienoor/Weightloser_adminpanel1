@@ -1,0 +1,52 @@
+@import "scss/variables";
+
+.base {
+    display: flex;
+    gap: 0.5em;
+
+    &.reversed {
+        flex-direction: row-reverse;
+
+        .menu_content {
+            right: unset;
+            left: 0;
+        }
+    }
+}
+
+.message {
+    background-color: $color_primary_extra_light;
+    border-radius: 0.3125em 0.3125em 0 0;
+    padding: 0.625em 1.25em;
+    margin-bottom: 0.9375em;
+
+    .time {
+        margin-top: 1.125em;
+        .icon {
+            svg {
+                width: 0.7em;
+                height: 0.7em;
+            }
+        }
+    }
+}
+
+.menu {
+    position: relative;
+    .menu_content {
+        position: absolute;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 0 1em 0 $color_bg_gray;
+        border-radius: 0.25em;
+        ul {
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+            li {
+                padding: 0.4em 0.5em;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import "scss/variables.scss";
+
+.button {
+  height: 3.0625rem;
+  padding-left: 1.4375rem;
+  padding-right: 1.4375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5625rem;
+  border: none;
+  cursor: pointer;
+  max-width: max-content;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.solid {
+  background-color: $color_secondary;
+  color: $color_white;
+}
+.outlined {
+  color: #23233c;
+  background-color: $color_white;
+  border: 0.0625em solid $color_gray_medium;
+
+  &.secondary {
+    border-color: $color_secondary;
+    color: $color_secondary;
+  }
+  &.danger {
+    border-color: $color_danger;
+    color: $color_danger;
+  }
+}
+
+.sm {
+  height: 2.25rem;
+}
+.xs {
+  height: 1.75rem;
+}
+
+.rect {
+  border-radius: 0.3em;
+}
+
+.circle {
+  width: 2.5625rem;
+  max-width: unset;
+  padding: unset;
+  height: 2.5625rem;
+  padding-top: 0.3em;
+}

@@ -1,0 +1,12 @@
+@import "scss/variables";
+
+.base {
+    border-radius: 2em;
+    border: 0.125em solid $color_gray_dark;
+    padding: 0.4em 1em;
+    display: inline-flex;
+    gap: 1em;
+    cursor: pointer;
+    align-items: center;
+    max-width: max-content;
+}

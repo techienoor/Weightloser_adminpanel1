@@ -1,0 +1,65 @@
+@import "scss/variables";
+
+.base {
+    display: flex;
+    background-color: $color_white;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    @media (max-width: 480px) {
+        flex-wrap: wrap;
+    }
+    
+    .image {
+        @media (min-width: 780px) {
+            min-width: 14.0625rem;
+            max-width: 14.0625rem;
+        }
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content {
+        border: 1px solid $color_bg_gray;
+        border-left: none;
+        flex: 1;
+        @media (max-width: 480px) {
+            border-left: 1px solid $color_bg_gray;
+            border-top: none;
+        }
+        padding: 0.9375em 1.3125em;
+        .title {
+            color: $color_black;
+            font-size: 1.5625rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 0.3rem;
+            min-height: 4.25rem;
+        }
+    }
+    
+    .exercise_label {
+        font-size: 0.8125rem;
+        color: $color_secondary;
+    }
+    .time {
+        display: inline-flex;
+        gap: 0.3625rem;
+        color: $color_gray_medium;
+        text-transform: uppercase;
+    }
+    .description {
+        font-size: 0.6875rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $color_black;
+    }
+}

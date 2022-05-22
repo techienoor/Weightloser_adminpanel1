@@ -1,0 +1,21 @@
+@import "scss/variables";
+
+.list {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    
+    &::-webkit-scrollbar {
+        width: 0.3em;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 1em;
+    }
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: $color_gray_medium;
+        }   
+    }
+}

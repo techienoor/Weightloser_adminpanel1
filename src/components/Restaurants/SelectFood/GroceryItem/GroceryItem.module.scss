@@ -1,0 +1,19 @@
+@import "scss/variables";
+
+.base {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 0.0625em solid $color_bg_gray;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    .title {
+        min-width: 12rem;
+    }
+}

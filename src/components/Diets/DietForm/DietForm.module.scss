@@ -1,0 +1,61 @@
+@import "scss/variables";
+
+.base {
+  background-color: $color_white;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  z-index: 99;
+
+  section:not(.image) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.head {
+  max-width: calc(100% - 6em);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+
+  > :first-child {
+    flex: 1;
+  }
+}
+
+.section_top {
+  display: flex;
+  column-gap: 2.3125rem;
+  row-gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 2.5625rem;
+  border-bottom: 1px solid $color_bg_gray;
+  margin-bottom: 1.25rem;
+
+  .inputs,
+  .selects {
+    display: flex;
+    gap: 1.25rem;
+    > div {
+      width: 10em;
+    }
+  }
+  .inputs {
+    width: 20.5625rem;
+  }
+}
+
+.times {
+  margin-top: 2.3125rem;
+  > div {
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid $color_bg_gray;
+    margin-bottom: 1.25rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

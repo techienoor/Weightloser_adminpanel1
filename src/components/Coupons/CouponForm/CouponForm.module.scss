@@ -1,0 +1,47 @@
+@import "scss/variables";
+
+.base {
+    background-color: $color_white;
+    padding: 2rem;
+}
+
+.section_top {
+    display: flex;
+    column-gap: 2.3125rem;
+    row-gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 2.5625rem;
+    border-bottom: 1px solid $color_bg_gray;
+    margin-bottom: 1.25rem;
+    
+    .inputs, .selects {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .inputs {
+        width: 20.5625rem;
+    }
+}
+
+.times {
+    margin-top: 2.3125rem;
+    > div {
+        padding-bottom: 0.625rem;
+        border-bottom: 1px solid $color_bg_gray;
+        margin-bottom: 1.25rem;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.parameters {
+    display: grid;
+    grid-template-columns: repeat(3, 10.125rem);
+    column-gap: 1.875rem;
+    row-gap: 0.9375rem;
+    margin-bottom: 1.5em;
+}

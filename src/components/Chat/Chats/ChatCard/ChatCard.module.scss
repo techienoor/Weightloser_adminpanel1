@@ -1,0 +1,26 @@
+@import "scss/variables";
+
+.chat_card {
+    padding: 1.1875em 0.9375em;
+    box-sizing: border-box;
+    min-height: 4.25em;
+    display: flex;
+    align-items: center;
+    gap: 0.9375em;
+    border-bottom: 0.0625em solid $color_bg_gray;
+    cursor: pointer;
+
+    img {
+        width: 1.9375em;
+        height: 1.9375em;
+        border-radius: 100%;
+    }
+    .status {
+        margin-left: auto;
+    }
+
+    &.active {
+        background-color: $color_white;
+        border-bottom-color: $color_white;
+    }
+}

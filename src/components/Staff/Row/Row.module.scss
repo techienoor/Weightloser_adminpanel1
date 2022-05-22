@@ -1,0 +1,28 @@
+@import "scss/variables";
+
+.base {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+    padding-top: 0.937em;
+    padding-bottom: 0.937em;
+    border-bottom: 0.0625em solid $color_bg_gray;
+    flex-wrap: wrap;
+
+    &:first-of-type{
+        border-top: 0.0625em solid $color_bg_gray;
+    }
+
+    img {
+        width: 3.375em;
+        height: 3.375em;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .actions {
+        display: flex;
+        gap: 0.5em;
+    }
+}

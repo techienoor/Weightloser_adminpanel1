@@ -1,0 +1,37 @@
+@import "scss/variables";
+
+.base {
+    width: fit-content;
+    border-radius: 0.3125rem;
+    &.hasError {
+        outline: 0.0625em solid $color_danger;
+    }
+    select {
+        border: none;
+        box-sizing: border-box;
+        min-width: 6.9375rem;
+        outline: none;
+        height: 2.4375rem;
+        color: $color_gray_dark;
+        border: 1px solid $color_bg_gray;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem;
+        border-radius: 0.3125rem;
+        font-size: 0.75rem;
+        width: 100%;
+    }
+    
+    &.fullWidth {
+        width: 100%;
+    }
+    
+    &.previewMode {
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

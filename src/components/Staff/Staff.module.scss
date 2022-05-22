@@ -1,0 +1,10 @@
+.container__actions {
+  display: flex;
+  column-gap: 2.5em;
+  row-gap: 1em;
+  flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    column-gap: 1em;
+  }
+}

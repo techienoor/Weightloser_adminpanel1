@@ -1,0 +1,136 @@
+@import "scss/variables";
+
+.top {
+  padding: 1.9375em;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3em;
+  row-gap: 1em;
+  align-items: center;
+
+  .left {
+    display: inline-flex;
+    gap: 0.9375em;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 20em;
+
+    .image {
+      width: 4.1875rem;
+      height: 4.1875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      background-color: $color_bg_gray;
+    }
+  }
+
+  .right {
+    gap: 1em;
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+    }
+  }
+}
+
+.list {
+  display: grid;
+  column-gap: 1.5em;
+  row-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  @media (max-width: 480px) {
+    column-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.875em;
+  column-gap: 3em;
+  row-gap: 1em;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media (min-width: 571px) {
+      max-width: 20em;
+    }
+
+    .schedule {
+      padding-left: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      box-sizing: border-box;
+      > div {
+        min-width: 8em;
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    .blogs {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+}
+
+.right {
+  position: relative;
+
+  @media (min-width: 570px) {
+    min-width: 30em;
+  }
+
+  @media (min-width: 908px) {
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      width: 0.0625em;
+      background-color: $color_bg_gray;
+      left: -1.5em;
+    }
+  }
+}
+
+.active_plans {
+  padding-bottom: 1.25em;
+  border-bottom: 0.0625em solid $color_bg_gray;
+  margin-bottom: 1.25em;
+}
+
+.container_label {
+  display: flex;
+  flex-direction: column;
+}
+
+.diets_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  > div {
+    flex: 1;
+  }
+  > div:first-child {
+    @media (min-width: 781px) {
+      border-right: 0.0625em solid $color_bg_gray;
+    }
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+}

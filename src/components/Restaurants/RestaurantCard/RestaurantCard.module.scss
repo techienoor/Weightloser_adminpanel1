@@ -1,0 +1,74 @@
+@import "scss/variables";
+
+.diet_card__base {
+    border-radius: 0.3rem;
+    box-shadow: 0 0 3px $color_gray_medium;
+    position: relative;
+    cursor: pointer;
+    .img_top {
+        height: 7.25rem;
+        img {
+            border-top-left-radius: 0.3rem;
+            border-top-right-radius: 0.3rem;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .btn_context_menu {
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+    }
+
+    .context_menu {
+        position: absolute;
+        right: 1em;
+        top: 1.5em;
+        background-color: $color_white;
+        box-shadow: 0 0 1em 0 $color_gray_medium;
+        border-radius: 0.25em;
+        list-style: none;
+        padding: 0;
+
+        li {
+            cursor: pointer;
+            padding: 0.2em 1em;
+            &:not(:last-child) {
+                border-bottom: 0.0625em solid $color_bg_gray;
+            }
+        }
+    }
+
+    .content {
+        padding-top: 0.5rem;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        padding-bottom: 0.625rem;
+        .head {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 0.0625rem solid $color_gray_light;
+            padding-bottom: 0.21875rem;
+            margin-bottom: 0.31875rem;
+            .duration {
+                color: $color_gray_medium;
+            }
+        }
+
+        .title {
+            font-family: 'Open Sans', sans-serif !important;
+        }
+
+        .follow_label, .follow_counts {
+            color: $color_gray_dark;
+            margin-top: 0;
+        }
+        .follow_counts {
+            float: right;
+            margin-top: 0.3rem;
+            font-family: 'Open Sans', sans-serif !important;
+        }
+    }
+}

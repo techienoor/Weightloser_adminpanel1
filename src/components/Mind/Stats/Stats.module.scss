@@ -1,0 +1,38 @@
+@import "scss/variables";
+
+.container_table {
+  background-color: $color_white;
+  padding: 1.25em;
+}
+
+.table_head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  padding: 1.25em 0;
+  align-items: center;
+
+  @media (max-width: 570px) {
+    padding: 1.25em 0;
+  }
+
+  .followers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  > div:last-child {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4em;
+  }
+}
+
+.actions {
+  display: inline-flex;
+  gap: 0.4em;
+  align-items: center;
+}

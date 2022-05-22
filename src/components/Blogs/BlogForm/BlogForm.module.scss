@@ -1,0 +1,12 @@
+@import "scss/variables";
+
+.base {
+    padding: 2em;
+}
+
+.container_editor {
+
+    div[class*="ck ck-content ck-editor__editable"] {
+        min-height: 25em;
+    }
+}

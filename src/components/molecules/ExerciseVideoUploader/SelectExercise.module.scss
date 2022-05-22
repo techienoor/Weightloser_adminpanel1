@@ -1,0 +1,50 @@
+@import "scss/variables";
+
+.base {
+    padding: 2em;
+    padding-right: 3em;
+}
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    .image {
+        align-self: center;
+    }
+
+    >div:nth-child(2) {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 0.7em;
+
+        > div {
+            width: 100%;
+        }
+    }
+}
+
+.days, .actions {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 0.0625em solid $color_bg_gray;
+}
+.days {
+    >div:last-child {
+        justify-content: center;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+    row-gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+
+    >:last-child {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,37 @@
+@import "scss/variables";
+
+.base {
+    background-color: $color_white;
+    padding: 1.25em 1.25em 2em;
+}
+
+.content {
+    margin-top: 2.0625em;
+    margin-bottom: 2.0625em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375em;
+    justify-content: center;
+    align-items: center;
+    
+    a {
+        color: $color_secondary;
+    }
+
+    .fb {
+        background-color: $color_secondary_light;
+        width: 2.875em;
+        height: 2.875em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    }
+}
+
+.links {
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+}

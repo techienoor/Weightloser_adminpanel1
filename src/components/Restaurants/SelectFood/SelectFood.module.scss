@@ -1,0 +1,146 @@
+@import "scss/variables";
+
+.heading {
+    padding: 1em;
+    padding-top: 2em;
+    padding-left: 3em;
+}
+
+.base {
+    // padding-left: 1.25rem;
+    // padding-right: 1.25rem;
+    min-height: 30em;
+    position: relative;
+}
+.top {
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9375rem;
+}
+
+
+.selects {
+    display: flex;
+    gap: 0.7em;
+    flex-direction: column;
+    width: 8em;
+
+    > div {
+        width: 100%;
+    }
+}
+.planTypes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 20em;
+    gap: 1em;
+    max-height: 7em;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.food {
+    padding-top: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    > div:not(:first-child):not(:nth-child(2)) {
+        border-left: 0.0625em solid $color_bg_gray;
+        padding-left: 1em;
+    }
+
+    .image, .item, .calories, .quantities {
+        align-self: center;
+    }
+    
+    .info {
+        max-width: 4em;
+        >div:last-child {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+    }
+}
+
+
+.nutrition, .dose, .top, .food {
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.nutrition {
+    padding-top: 1em;
+    border-top: 0.1875rem solid $color_bg_gray;   
+    border-bottom: 0.1875rem solid $color_bg_gray;   
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    >div:not(:first-child) {
+        max-width: 6em;
+    }
+}
+
+.top, .food, .dose, .nutrition, .actions, .tabs, .grocery {
+    @media (min-width: 571px) {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+.meta {
+    display: flex;
+    .ingredients {
+        padding: 1em 1em 1em 3em;
+        flex: 0.5;
+        >div:last-child {
+            margin-top: 0.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+    }
+    .procedure {
+        flex: 1;
+        padding: 1em 3em 1em 1em;
+        border: 0.0625em solid $color_bg_gray;
+        border-right: none;
+        >span:first-child {
+            margin-bottom: 0.5em;
+        }
+        div[class*="ck ck-content ck-editor__editable"] {
+            min-height: 10em;
+        }
+
+        .procedure_content {
+            outline: 1px solid red;
+        }
+        &.pl3 {
+            padding-left: 3em;
+        }
+    }
+}
+
+.grocery {
+    margin-top: 1em;
+}
+
+
+.actions {
+    float: right;
+    margin-right: 1em;
+    margin-top: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}

@@ -1,0 +1,16 @@
+@import "scss/variables";
+
+.base {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2em;
+  row-gap: 1em;
+  align-items: center;
+  padding: 1.5em 2em;
+  border: 0.0625em solid $color_gray_medium;
+  border-radius: 0.4em;
+
+  img {
+    width: 2em;
+  }
+}

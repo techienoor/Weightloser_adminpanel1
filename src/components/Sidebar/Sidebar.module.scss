@@ -1,0 +1,110 @@
+@import "scss/variables.scss";
+
+.container_main {
+    background-color: #fff;
+    padding: 1.25rem;
+    width: 15.625rem;
+    box-sizing: border-box;
+    top: 5.125rem;
+    bottom: 0;
+    position: fixed;
+    .icon_close {
+        float: right;
+        display: none;
+    }
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    transition: all 0.3s ease;
+    left: 0;
+    
+    &.closed {
+        @media (max-width: 780px) {
+            display: none;
+        }
+    }
+    &.open {   /* reversed for desktop */
+        @media (min-width: 781px) {
+            left: -20rem;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.container_main::-webkit-scrollbar {
+    display: none;
+}
+
+.menu_header {
+    font-size: 0.6875em;
+    color: #AFAFAF;
+    margin-bottom: 1.25em;
+}
+
+.nav_item {
+    display: flex;
+    gap: 0.375em;
+    align-items: center;
+    margin-bottom: 1.875em;
+    .icon {
+        width: 1em;
+    }
+    svg {
+        fill: $color_text_dark;
+    }
+    .text {
+        font-size: 0.9375em;
+        color: $color_text_dark;
+        text-decoration: none !important;
+    }
+    &.active {
+        .text {
+            color: $color_secondary;
+        } 
+        svg {
+            fill: $color_secondary;
+        }
+    }
+}
+
+.for_mobile {
+    display: none;
+}
+
+@media (max-width: 780px) {
+    .container_main {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        margin-top: 0;
+        height: 100%;
+        .icon_close {
+            display: block;
+            position: fixed;
+            top: 1.25rem;
+            right: 1.25rem;
+        }
+    }
+    .for_mobile {
+        display: block;
+        .search {
+            margin-top: 1.875em;
+            margin-bottom: 1.875em;
+            width: calc(100vw - 6em);
+            > div {
+                width: 100%;
+            }
+        }
+        
+    }
+    .menu .for_mobile:last-child {
+        border-top: 0.0625em solid $color_gray_light;
+        padding-top: 1.875em;
+        display: block;
+    }
+    
+}

@@ -1,0 +1,8 @@
+@import "scss/variables";
+
+.container_transactions {
+    background-color: $color_white;
+    padding: 1.25em;
+    margin-top: 1em;
+    display: grid;
+}

@@ -1,0 +1,71 @@
+@import "scss/variables";
+
+.base {
+  padding: 2em 3em;
+  .top {
+    position: relative;
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 0.125em;
+      background-color: $color_bg_gray;
+      bottom: 0;
+      left: -3em;
+      right: -3em;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      > div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-left: auto;
+      align-items: flex-end;
+    }
+  }
+
+  .roles {
+    .list {
+      margin-top: 2em;
+    }
+  }
+}
+
+.clearance-base {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 0.0625em solid $color_bg_gray;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.confirmation {
+  width: max-content;
+  padding: 2em;
+  border: 0.125em solid $color_bg_gray;
+  border-radius: 0.5em;
+  text-align: center;
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}

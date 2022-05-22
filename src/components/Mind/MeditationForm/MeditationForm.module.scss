@@ -1,0 +1,71 @@
+@import "scss/variables";
+
+.base {
+    background-color: $color_white;
+    // padding: 1.3rem 2rem;
+}
+
+.name {
+    min-height: 3em;
+    margin-top: 1em;
+    margin-left: 1.3em;
+}
+
+.section_top {
+    display: flex;
+    column-gap: 2.3125rem;
+    row-gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 2.5625rem;
+    border-bottom: 1px solid $color_bg_gray;
+    margin-bottom: 1.25rem;
+    padding-top: 1em;
+    padding-left: 1.3em;
+
+    .inputs, .selects {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .inputs {
+        width: 20.5625rem;
+    }
+}
+
+.times {
+    margin-top: 2.3125rem;
+    > div {
+        padding-bottom: 0.625rem;
+        border-bottom: 1px solid $color_bg_gray;
+        margin-bottom: 1.25rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.numbers {
+    margin-bottom: 1em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 0 1.3em;
+    > div:not(:first-child) {
+        padding-left: 1em;
+        border-left: 0.0625em solid $color_bg_gray;
+    }
+}
+
+.days_info {
+    padding: 0 1.3rem;
+}
+
+.actions {
+    float: right;
+    @media (min-width: 571px) {
+        margin-right: 3em;
+        margin-top: 1em;
+    }
+}

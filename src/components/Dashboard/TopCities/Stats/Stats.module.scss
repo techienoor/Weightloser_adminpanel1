@@ -1,0 +1,38 @@
+@import "scss/variables";
+
+.base {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    > span {
+        min-width: 10em;
+    }
+}
+
+.container_value {
+    @media (max-width: 310px) {
+        min-width: 5em;
+    }
+    min-width: 15em;
+    flex: 1;
+    height: 0.25em;
+}
+
+.value {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25em;
+    background-color: red;
+    
+    &.high {
+        background-color: $color_secondary;
+    }
+    &.medium {
+        background-color: $color_text_success_light;
+    }
+    &.low {
+        background-color: $color_warning;
+    }
+}
+

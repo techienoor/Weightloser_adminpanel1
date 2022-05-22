@@ -1,0 +1,29 @@
+@import "scss/variables";
+
+.input_container {
+    min-height: 2.4375em;
+    background-color: $color_primary_extra_light;
+    display: inline-flex;
+    border-radius: 1.25em;
+    align-items: center;
+    padding-left: 1.225em;
+    padding-right: 1.225em;
+    gap: 0.73125em;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+
+    .icon_attachment {
+        padding-top: 0.3em;
+        margin-left: auto;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+        font-size: 0.9375rem;
+        width: 100%;
+        outline: none;
+        font-family: "Montserrat", sans-serif;
+    }
+}

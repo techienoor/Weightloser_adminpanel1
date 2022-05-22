@@ -1,0 +1,17 @@
+@import "scss/variables";
+
+.label {
+    margin-right: 3.4375rem;
+}
+
+.time_picker {
+    margin-top: 0.9375rem;
+    background-color: $color_bg_gray;
+    width: 5.1875rem;
+    height: 7.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.625rem;
+}

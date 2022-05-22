@@ -1,0 +1,98 @@
+@import "scss/variables";
+
+.base {
+  display: grid;
+}
+
+.container_table {
+  overflow-x: auto;
+  padding-bottom: 1em;
+  &:not(.fullHeight) {
+    max-height: 24em;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.thead {
+  background-color: $color_bg_gray;
+  th {
+    white-space: nowrap;
+    padding: 0.9375em 0.3375em;
+  }
+  th:first-of-type {
+    padding-left: 0.9375em;
+  }
+}
+
+.trow {
+  padding: 0.375em 0.9375em;
+  cursor: pointer;
+  td {
+    padding-top: 1.25em;
+    padding-left: 0.3375em;
+    padding-right: 0.3375em;
+  }
+  td:first-of-type {
+    padding-left: 0.9375em;
+  }
+}
+
+@mixin arrowClass($color, $rotation: 180deg) {
+  color: $color;
+  .arrow {
+    transform: rotate($rotation);
+    svg {
+      fill: $color;
+    }
+  }
+}
+
+.rating {
+  .arrow {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+  &.dark {
+    @include arrowClass($color_text_dark);
+  }
+  &.danger {
+    @include arrowClass($color_danger);
+  }
+  &.warningHigh {
+    @include arrowClass($color_warning_high);
+  }
+  &.warning {
+    @include arrowClass($color_warning);
+  }
+  &.successMedium {
+    @include arrowClass($color_success_medium, 0deg);
+  }
+  &.success {
+    @include arrowClass($color_text_success_light, 0deg);
+  }
+}
+
+.badge {
+  padding: 0.075em 0.25em 0.1375em;
+  display: inline-block;
+  border-radius: 0.3125em;
+  text-transform: capitalize;
+
+  &.paid {
+    background-color: $color_success_light;
+    color: $color_text_success_light;
+  }
+  &.refund {
+    background-color: $color_warning_light;
+    color: $color_warning;
+  }
+  &.unpaid {
+    background-color: $color_danger_light;
+    color: $color_danger;
+  }
+}

@@ -1,0 +1,15 @@
+.base {
+    display: grid;
+    margin-top: 1em;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(40.9375rem, 1fr));
+    row-gap: 1rem;
+    column-gap: 3rem;
+    @media (max-width: 570px) {
+        grid-template-columns: 1fr;
+    }
+    
+    > div:nth-child(even) {
+        justify-self: flex-end;
+    }
+}

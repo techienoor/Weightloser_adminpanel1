@@ -1,0 +1,50 @@
+@import "scss/variables";
+
+.modal {
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  
+    .modal_content {
+      background-color: $color_white;
+      margin: 50px;
+      border-radius: 0.625rem;
+      overflow: auto;
+      position: relative;
+  
+      @media (max-width: 667px) {
+        height: 100vh;
+      }
+
+      .icon_close {
+        position: absolute;
+        right: 1.75rem;
+        top: 1.75rem;
+        z-index: 4;
+      }
+  
+      @media (max-width: 667px) {
+        margin: 0;
+        border-radius: 0;
+      }
+      @media (min-width: 992px) {
+        margin: 5rem 7rem;
+      }
+      @media (min-width: 1280px) {
+        margin: 5rem 10rem;
+      }
+      @media (min-width: 1360px) {
+        margin: 5rem 14rem;
+        &.lg {
+          margin: 4rem 7rem;
+        }
+      }
+      @media (min-width: 1920px) {
+        margin: 5rem 15rem;
+      }
+    }
+  }

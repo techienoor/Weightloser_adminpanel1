@@ -1,0 +1,18 @@
+.login__base {
+  @media (min-width: 571px) {
+    max-width: 480px;
+    margin: auto;
+    margin-top: 10em;
+    text-align: center;
+  }
+  .logo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: block;
+  }
+  .creds {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}

@@ -1,0 +1,46 @@
+@import "scss/variables";
+
+.base {
+    border-radius: 0.4em;
+
+    background-color: $color_white;
+}
+
+.top {
+    border-radius: 0.4em;
+    background-color: $color_secondary_light;
+    min-height: 8.125em;
+    padding: 1.25em;
+    padding-right: 10.471125em;
+    padding-bottom: 2.5em;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: visible;
+    display: flex;
+    gap: 0.8125em;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .label_welcome, .username {
+        font-size: 0.9375rem;
+        color: $color_secondary;
+        display: block;
+    }
+    .label_welcome {
+        font-weight: 600;
+    }
+    .user_image {
+        position: absolute;
+        bottom: -0.25em;
+        right: 1.3125em;
+    }
+    > img {
+        width: 4.0625em;
+        height: 4.0625em;
+        background-color: white;
+        padding: 0.20em;
+        border-radius: 100%;
+        // position: absolute;
+        // bottom: -2.0315em;
+    }
+}

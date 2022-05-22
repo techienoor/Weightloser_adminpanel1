@@ -1,0 +1,32 @@
+@import "scss/variables";
+
+.base {
+    label {
+        display: inline-block;
+        max-width: min-content;
+        word-break: break-all;
+        text-align: center;
+        margin-right: 0.625rem;
+    }
+}
+
+.day {
+    transition: all 0.3s ease;
+    background-color: $color_bg_gray;
+    border-radius: 0.625rem;
+    font-size: 1.25rem;
+    width: 2.75rem;
+    height: 3.6875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 0.56875rem;
+    padding-right: 0.2rem;
+    padding-left: 0.175rem;
+    &:hover, &.selected {
+        background-color: $color_secondary;
+        color: $color_white;
+    }
+}

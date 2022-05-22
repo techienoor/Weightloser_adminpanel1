@@ -1,0 +1,12 @@
+@import "scss/variables";
+
+.base {
+    font-size: 0.75rem;
+}
+
+.carbs {
+    margin-left: 0.3125rem;
+}
+.carbs, .left {
+    color: $color_gray_dark;
+}

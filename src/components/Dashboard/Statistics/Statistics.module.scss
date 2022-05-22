@@ -1,0 +1,13 @@
+@import "scss/variables";
+
+.base {
+    border-radius: 0.3125em;
+    padding: 1.125em 1.25em;
+    background-color: $color_white;
+    width: 100%;
+    min-width: 12em;
+    .icon {
+        width: 100%;
+        text-align: right;
+    }
+}

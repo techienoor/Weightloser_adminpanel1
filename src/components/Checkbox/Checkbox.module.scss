@@ -1,0 +1,64 @@
+@import "scss/variables";
+
+.base {
+    display: block;
+    position: relative;
+    padding-left: 2.1875em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .base input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: -0.5875em;
+    left: 0;
+    height: 1.125em;
+    width: 1.125em;
+    background-color: $color_white;
+    border: 0.0625em solid $color_bg_gray;
+    border-radius: 0.3125em;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .base input:checked ~ .checkmark {
+    background-color: $color_secondary;
+    border-color: $color_secondary;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .base input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .base .checkmark:after {
+    left: 0.4375em;
+    top: 0.125em;
+    width: 0.1875em;
+    height: 0.5625em;
+    border: solid $color_white;
+    border-width: 0 0.125em 0.125em 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

@@ -1,0 +1,10 @@
+@import "scss/variables";
+
+.container__top_cities {
+    padding: 1.25em;
+    background-color: $color_white;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+}

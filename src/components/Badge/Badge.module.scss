@@ -1,0 +1,9 @@
+@import "scss/variables";
+
+.base {
+    cursor: default;
+    background-color: $color_primary_light;
+    color: $color_secondary;
+    padding: 0.1em 0.4em 0.2em 0.4em;
+    border-radius: 1em;
+}

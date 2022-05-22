@@ -1,0 +1,37 @@
+.base {
+  display: flex;
+  align-items: center;
+  @media (max-width: 481px) {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+  .left {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    @media (min-width: 481px) {
+      flex-direction: column;
+      border-right: 0.0625rem solid lightgrey;
+      padding-right: 2rem;
+    }
+  }
+  .right {
+    display: grid;
+    grid-gap: 1rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(13.125rem, 1fr));
+    @media (min-width: 481px) {
+      padding-left: 2rem;
+    }
+  }
+}
+
+.head {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+  > a {
+    margin-left: auto;
+  }
+}

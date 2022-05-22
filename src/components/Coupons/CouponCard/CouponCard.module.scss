@@ -1,0 +1,49 @@
+@import "scss/variables";
+
+.base {
+    position: relative;
+    background-color: $color_white;
+    box-shadow: 0 0 6px 1px $color_bg_gray;
+    @media (min-width: 780px) {
+        min-width: 17.375em;
+    }
+    padding: 0.75em;
+    text-align: center;
+
+    img {
+        width: 4.125em;
+        height: 4.125em;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .icon_edit {
+        position: absolute;
+        top: 0.55em;
+        right: 0.55em;
+    }
+}
+
+.title {
+    font-size: 0.9375rem;
+    margin-top: 0.3125rem;
+    margin-bottom: 0.625rem;
+    font-weight: 600;
+}
+.code {
+    font-size: 0.9375rem;
+    margin-bottom: 0.625rem;
+    span {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+.date, .traffic {
+    font-size: 0.6875rem;
+    margin-bottom: 0.625rem;
+}
+.traffic {
+    border-top: 0.0625rem solid $color_bg_gray;
+    padding-top: 0.625rem;
+    display: inline-block;
+}

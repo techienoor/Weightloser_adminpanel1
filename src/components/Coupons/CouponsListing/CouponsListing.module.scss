@@ -1,0 +1,10 @@
+.coupons__listing_container {
+    margin-top: 1em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(17.375em, 1fr));
+    @media (min-width: 481px) {
+        row-gap: 2.1875em;
+        column-gap: 1.5625em;
+    }
+}

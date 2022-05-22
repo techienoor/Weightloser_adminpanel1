@@ -1,0 +1,16 @@
+@import "scss/variables";
+
+.container__activities {
+    padding: 1.25em;
+    background-color: $color_white;
+    @media (min-width: 360px) {
+        min-width: 20em;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9em;
+    margin-bottom: 3.25em;
+}

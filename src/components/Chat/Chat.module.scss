@@ -1,0 +1,26 @@
+.content {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+        align-self: flex-start;
+        max-height: calc(100vh - 11em);
+        width: 100%;
+        @media (min-width: 938px) {
+            position: sticky;
+            top: 7em;
+        }
+
+        @media (min-width: 1100px) {
+            width: 32.5em;
+        }
+    }
+    .right {
+        flex: 1;
+    }
+}
+

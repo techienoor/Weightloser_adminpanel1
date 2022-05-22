@@ -1,0 +1,31 @@
+@import "scss/variables";
+
+.container_tabs {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.1875em;
+    row-gap: 1em;
+
+    >div {
+        flex: 1;
+    }
+}
+
+.tab {
+    display: inline-block;
+    background-color: $color_white;
+    color: $color_text_dark;
+    min-height: 2.4375em;
+    padding: 0.625em;
+    box-sizing: border-box;
+    border-radius: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+        background-color: $color_secondary;
+        color: $color_white;
+    }
+}

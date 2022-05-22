@@ -1,0 +1,59 @@
+@import "scss/variables";
+
+.input_base {
+    background-color: $color_bg_gray;
+    display: flex;
+    min-height: 2.4375rem;
+    border-radius: 0.3125rem;
+    padding: 0.625rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+
+    &.hasError {
+        outline: 0.0625em solid $color_danger;
+    }
+
+    input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        width: 100%;
+        font-size: 0.75rem;
+
+        &.lg {
+            font-size: 1.875rem;
+        }
+    }
+
+    &.outlined {
+        background-color: $color_white;
+        border: 0.0625rem solid $color_bg_gray;
+    }
+    &.rounded {
+        border-radius: 1.1875rem;
+        padding-left: 1.21875rem;
+        padding-right: 1.21875rem;
+    }
+    &.no-border {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }        
+    &.previewMode {
+        border: none;
+        background-color: transparent;
+        padding-left: 0;
+    }
+}
+
+.unit {
+    font-size: 0.6875rem;
+    min-height: 1.3125rem;
+    border-radius: 1.125rem;
+    padding: 0.25rem 0.5rem;
+    box-sizing: border-box;
+    border: 0.0625rem solid $color_bg_gray;
+}

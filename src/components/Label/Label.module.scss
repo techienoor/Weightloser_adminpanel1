@@ -1,0 +1,36 @@
+@import "scss/variables";
+
+.base {
+    min-height: 1.8125rem;
+    height: fit-content;
+    white-space: nowrap;
+    padding: 0.40625rem 0.75rem;
+    box-sizing: border-box;
+    border-radius: 1.1875rem;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+    border: 0.0625rem solid $color_bg_gray;
+    transition: all 0.3s ease;
+
+    &.disabled {
+        cursor: default;
+    }
+    &:not(.disabled):hover, &.active {
+        background-color: $color_secondary;
+        border-color: $color_secondary;
+        color: $color_white;
+    }
+}
+
+.circle {
+    display: inline-block;
+    height: 1.8125rem;
+    width: 1.8125rem;
+    box-sizing: content-box;
+    padding: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

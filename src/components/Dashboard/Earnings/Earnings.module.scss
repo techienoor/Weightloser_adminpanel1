@@ -1,0 +1,9 @@
+@import "scss/variables";
+
+.base {
+    background-color: $color_white;
+    padding: 0.875em 1.25em 0.625em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

@@ -1,0 +1,29 @@
+@import "scss/variables";
+
+.base {
+    position: relative;
+    .dataList {
+        position: absolute;
+        top: calc(100% + 0.6rem);
+        border-radius: 0.4rem;
+        left: 0.0625rem;
+        right: 0.0625rem;
+        box-shadow: 0 0 2px $color_gray_medium;
+        background-color: $color_white;
+        max-height: 10rem;
+        overflow: auto;
+        
+        > div {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+
+            &.placeholder {
+                cursor: default;
+            }
+        }
+        > div:not(:last-child) {
+            border-bottom: 1px solid $color_gray_light;
+        }
+    }
+}
