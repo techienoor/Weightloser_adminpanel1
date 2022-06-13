@@ -168,3 +168,38 @@
 .grocery {
     margin-top: 1em;
 }
+
+.allergy{
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+.allergyCheck{
+    display: flex;
+    padding-left: 3em;
+    padding-right: 3em;
+    input {
+        margin-left: 20px;
+    }
+}
+.allergyFood{
+    width: 91%;
+    display: flex;
+    overflow-x: auto; 
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    input {
+        margin-left: 15px;
+    }
+    .allergyItems{
+        width: 100%;
+    }
+}
+
+.description {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}

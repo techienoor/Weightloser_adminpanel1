@@ -103,12 +103,17 @@ const SelectFood = ({
   const [selectedFood, setSelectedFood] = useState({});
   const [cuisines, setCuisines] = useState([]);
   const [categotries, setCategories] = useState([]);
+  const [isAllergy, setIsAllergy] = useState(false);
+  const [allergyFood, setAllergyFood] = useState([]);
+  const dummies = ['Pork', 'Beef', 'Chicken', 'Turkey', 'Lamb', 'Goat', 'Diary', 'Eggs', 'Soy', 'Nuts', 'Bread', 'Fruits', 
+  'Non-starchy', 'Pasta', 'Legumes', 'Beans', 'Starchy vegetables', 'Seafood', 'Dairy', 'Rice'];
   const [initialValues, setInitialValues] = useState({
     Name: "",
     ImageFile: null,
     Day: [],
     ServingSize: selectedFood?.ServingSize,
     DetailsDesc: "",
+    Description:'',
     ingredients: ["", "", ""],
     Cuisine: "",
     Category: "",
@@ -232,7 +237,6 @@ const SelectFood = ({
         "FoodId",
         "HouseHoldServing",
         "Unit",
-        "Description",
         "CreatedAt",
         "ModModifiedAti",
       ];
@@ -260,10 +264,12 @@ const SelectFood = ({
       foodData.Items = JSON.parse(foodData.Items);
       foodData.Day = [];
       try {
-        foodData.ingredients = JSON.parse(foodData.Description);
+        foodData.ingredients = JSON.parse(recipeDetails.Ingredients);
       } catch (err) {
         foodData.ingredients = [...initialValues.ingredients];
       }
+      setIsAllergy(foodData.IsAllergic)
+      setAllergyFood(JSON.parse(foodData.AllergicFood))
       setInitialValues(foodData);
     } catch (ex) {
       console.error("Error in fetching food details", ex.message);
@@ -380,6 +386,11 @@ const SelectFood = ({
       throw ex;
     }
   };
+  const handleAllergies = (x) => {
+    if(allergyFood.includes(x)) {
+      setAllergyFood(allergyFood.filter(e => e !== x));
+    } else setAllergyFood(oldArray => [...oldArray, x])
+  }
   return (
     <Formik
       initialValues={initialValues}
@@ -436,7 +447,9 @@ const SelectFood = ({
             });
           }
           values.DetailsDesc = JSON.stringify([...values.ingredients]);
-          values.Description = JSON.stringify([...values.ingredients]);
+          values.Description = values.Description;
+          values.IsAllergic = isAllergy;
+          values.AllergicFood = JSON.stringify(allergyFood);
           values.Grocery = JSON.stringify(values.Grocery);
           values.GroceryList = new Blob([JSON.stringify({ grocery: [] })], {
             type: "application/json",
@@ -458,6 +471,7 @@ const SelectFood = ({
           if (savedFoodId) {
             await saveFoodPlan(savedFoodId, values.ServingSize);
           }
+
           // const detailsSaved = await saveFoodDetails(values);
           // if (!detailsSaved) {
           //   toast.error("An error occurred in saving the food details");
@@ -764,6 +778,68 @@ const SelectFood = ({
                       />
                     ))}
                   </div>
+                  <div className={styles.allergy}>
+                    <div className={styles.allergyCheck}>
+                    <Typography variant="body_bold">Pick any allergy</Typography>
+                    <div className="form-check" onClick={()=>setIsAllergy(true)}>
+                      <input 
+                        className="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault" 
+                        id="flexRadioDefault1"
+                        checked={isAllergy}
+                        />
+                      <label className="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div className="form-check" onClick={()=>setIsAllergy(false)}>
+                      <input 
+                        className="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault" 
+                        id="flexRadioDefault2"
+                        checked={!isAllergy}
+                        />
+                      <label className="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                    </div>
+                    {isAllergy && <div className={styles.allergyFood}>
+                      {dummies?.map(x=>{
+                        return <div  
+                        onClick={()=>handleAllergies(x)}
+                        >
+                        <input 
+                        className="form-check-input" 
+                        type="checkbox" 
+                        value="" 
+                        id={"flexCheckChecked" + x} 
+                        checked={allergyFood.includes(x)}/>
+                        <label for="flexCheckChecked" className={styles.allergyItems}>
+                          {x}
+                        </label>
+                      </div>
+                      })}
+                      
+                    </div>}
+                  </div>
+
+                  <div className={styles.description}>
+                      <Typography variant="body_bold" className="mb-1" block>
+                        Description
+                      </Typography>
+                      <Input
+                        onBlur={handleBlur}
+                        variant="outlined"
+                        name="Description"
+                        type="text"
+                        value={values["Description"]}
+                        onChange={handleChange}
+                      />
+                    </div>
+                 
                   <div className={styles.meta}>
                     <div
                       className={classNames(
