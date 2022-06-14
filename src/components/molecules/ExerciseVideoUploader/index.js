@@ -193,7 +193,7 @@ const ExerciseVideoUploader = ({
                     onBlur={handleBlur}
                     error={touched["Name"] && errors["Name"]}
                   />
-                  <Select
+                  {/* <Select
                     placeholder="Category"
                     options={categories}
                     idParam="Name"
@@ -202,7 +202,7 @@ const ExerciseVideoUploader = ({
                     onChange={handleChange}
                     onBlur={handleBlur}
                     error={touched["Category"] && errors["Category"]}
-                  />
+                  /> */}
                   <Input
                     placeholder="Duration"
                     type="number"
